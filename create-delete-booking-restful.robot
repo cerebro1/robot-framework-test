@@ -13,7 +13,7 @@ Create a Booking at Restful Booker
     ${response}    GET    https://restful-booker.herokuapp.com/booking/${id}
     Log    ${response.json()}
     Should Be Equal    ${response.json()}[lastname]    Gruber
-    Should Be Equal    ${response.json()}[firstname]    Johm   
+    Should Be Equal    ${response.json()}[firstname]    John   
     Should Be Equal As Numbers    ${response.json()}[totalprice]    2000
     Dictionary Should Contain Value     ${response.json()}    Gruber
 
